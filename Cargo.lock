@@ -3145,6 +3145,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "pollster"
+version = "1.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bc6355899e1c9462875b6757c79f3caa011a1fdae12bbb1a2e72dd1f234f8336"
+
+[[package]]
 name = "pollster-macro"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4662,7 +4668,7 @@ dependencies = [
  "naga-test",
  "nanorand",
  "pico-args",
- "pollster",
+ "pollster 1.0.1",
  "profiling",
  "rayon",
  "serde",
@@ -4677,7 +4683,7 @@ name = "wgpu-bug-repro-01-texture-atomic-bug"
 version = "0.0.0"
 dependencies = [
  "env_logger",
- "pollster",
+ "pollster 1.0.1",
  "wgpu",
  "winit",
 ]
@@ -4687,7 +4693,7 @@ name = "wgpu-bug-repro-02-present-bugs"
 version = "0.0.0"
 dependencies = [
  "env_logger",
- "pollster",
+ "pollster 1.0.1",
  "wgpu",
  "winit",
 ]
@@ -4770,7 +4776,7 @@ version = "0.0.0"
 dependencies = [
  "bytemuck",
  "env_logger",
- "pollster",
+ "pollster 0.4.0",
  "wgpu",
 ]
 
@@ -4779,7 +4785,7 @@ name = "wgpu-example-02-hello-window"
 version = "0.0.0"
 dependencies = [
  "env_logger",
- "pollster",
+ "pollster 0.4.0",
  "wgpu",
  "winit",
 ]
@@ -4793,7 +4799,7 @@ dependencies = [
  "env_logger",
  "objc2 0.6.4",
  "objc2-foundation 0.3.2",
- "pollster",
+ "pollster 0.4.0",
  "wasm-bindgen",
  "wasm-bindgen-futures",
  "web-sys",
@@ -4805,7 +4811,7 @@ dependencies = [
 name = "wgpu-example-custom-backend"
 version = "0.0.0"
 dependencies = [
- "pollster",
+ "pollster 0.4.0",
  "wgpu",
 ]
 
@@ -4829,7 +4835,7 @@ dependencies = [
  "noise",
  "obj",
  "png",
- "pollster",
+ "pollster 1.0.1",
  "wasm-bindgen",
  "wasm-bindgen-futures",
  "web-sys",
@@ -4910,7 +4916,7 @@ dependencies = [
  "exhaust",
  "hashbrown 0.17.1",
  "pico-args",
- "pollster",
+ "pollster 1.0.1",
  "serde",
  "serde_json",
  "wgpu",
@@ -4960,7 +4966,7 @@ dependencies = [
  "nv-flip",
  "parking_lot",
  "png",
- "pollster",
+ "pollster 1.0.1",
  "profiling",
  "raw-window-handle",
  "serde",
