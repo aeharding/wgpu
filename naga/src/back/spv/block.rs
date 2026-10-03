@@ -1270,7 +1270,14 @@ impl BlockContext<'_> {
                         Some(crate::ScalarKind::Sint) => spirv::GLOp::SSign,
                         other => unimplemented!("Unexpected sign({:?})", other),
                     }),
-                    Mf::Fma => MathOp::Ext(spirv::GLOp::Fma),
+                    Mf::Fma => {
+                        // Kjerag requires an explicit fma to stay one operation.
+                        // Without this decoration Vulkan may split it into a
+                        // multiply and add with two rounding steps (Kjerag #251).
+                        self.writer
+                            .decorate(id, spirv::Decoration::NoContraction, &[]);
+                        MathOp::Ext(spirv::GLOp::Fma)
+                    }
                     Mf::Mix => {
                         let selector = arg2.unwrap();
                         let selector_ty =
